@@ -1,0 +1,57 @@
+Initial Table
+*If the attribute you want as the PK in the initial table, uniquely identifies at least ONE other attribute you can use it.
+EmployeeID(PK), EmployeeName, DeptNumber, DeptName, (ProjectNumber,ProjectName, WeeklyHours)
+
+First Normal Form(1NF) - all atomic/no repeating groups
+ 
+EmployeeID(PK), EmployeeFirstName, EmployeelastName, DeptNumber, DeptName 
+
+ProjectNumber(PK),ProjectName, WeeklyHours, EmployeeID(PK)(FK)
+
+Second Normal Form(2NF) - No Partial Dependencies
+
+EmployeeID(PK), EmployeeFirstName, EmployeelastName, DeptNumber, DeptName 
+
+ProjectNumber(PK)(FK), WeeklyHours, EmployeeID(PK)(FK)
+
+ProjectNumber(PK), ProjectName
+
+Third Normal Form(3NF) - No Transitive Dependencies
+
+EmployeeID(PK), EmployeeFirstName, EmployeelastName, DeptNumber(FK) 
+
+DeptNumber(PK),DeptName 
+
+ProjectNumber(PK)(FK), WeeklyHours, EmployeeID(PK)(FK)
+
+ProjectNumber(PK), ProjectName
+
+
+First form 
+
+
+
+SSN (primary key), employee first name, employee last name, dept number, dept name
+
+project number (primary key), project name, weekly hours, ssn (foreign key)
+
+
+
+Second form
+
+SSN (primary key), employee first name, employee last name, dept number, dept name
+
+project number (pk)(fk), weekly hours, SSN (primary key)(foreign key)
+
+project number (primary key), project name
+
+
+Third form 
+
+SSN (primary key), employee first name, employee last name, dept number (foreign key)
+
+dept number (primary key), dept name
+
+project number (primary key)(foreign key), weekly hours, SSN (primary key)(foreign key)
+
+project number (primary key), project name
